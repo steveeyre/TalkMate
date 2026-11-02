@@ -50,12 +50,17 @@ scripts/
   deploy-local-whisper.ps1  单独部署 ASR
   deploy-local-tts.ps1      单独部署 TTS
   download_kokoro_models.py Kokoro 权重下载（固定 release + SHA-256）
+  import-ollama-models.ps1  导入本机 Ollama 模型（可选）
+  local-models.json         本地模型清单
+  requirements-whisper.txt  ASR 依赖
+  requirements-tts.txt      TTS 依赖
   build-package.ps1         生成便携包
   sync-embeds.ps1           同步 index.html 内嵌脚本
 tests/                      Node 测试
 assets/scenes/              场景练习图片
 PRD.md                      产品需求文档
 README-使用说明.md           安装与使用手册
+scripts/README.md           本地语音部署与选型说明
 ```
 
 ## 开发

@@ -3,7 +3,7 @@
 > **本机已按「中档」落地（2026-09）**
 > - ASR：faster-whisper **`small`** → `http://127.0.0.1:8787/v1`
 > - TTS：**Kokoro-82M ONNX**（主）→ `http://127.0.0.1:8788/v1`（回退 edge-tts）
-> - 手机同 Wi-Fi 请填：`http://192.168.9.235:8787/v1` / `:8788/v1`
+> - 手机同 Wi-Fi 请填：`http://<PC局域网IP>:8787/v1` / `:8788/v1`
 > - 一键：`deploy-local-whisper.ps1 -Start -Model small` · `deploy-local-tts.ps1 -Start`
 > - Kokoro 权重目录：`scripts/models/`（约 326MB + 28MB voices）
 
@@ -39,7 +39,7 @@
 
 ## 低 / 中 / 高方案（为性能稍强的 PC）
 
-本机参考：Intel Core Ultra 9 285H（16 核）+ Intel Arc 140T + 32GB RAM → **轻松覆盖中档，高档也可尝试**。
+参考配置：16 核 CPU + 集成显卡 + 32GB RAM 的轻薄本 → **轻松覆盖中档，高档也可尝试**。
 
 ### 低档 — 先跑通、手机延迟优先
 
@@ -66,7 +66,7 @@
 
 **默认音色：Female·Child**（向幼儿讲故事更贴）。
 
-## 中档 — 日常主力（推荐你这台机器默认）
+## 中档 — 日常主力（推荐默认）
 
 | 项 | 选型 | 运行位置 | 说明 |
 |----|------|----------|------|
@@ -74,7 +74,7 @@
 | TTS | **Kokoro-82M**（`kokoro-v1.0` / `hexgrad/Kokoro-82M`） | PC `:8788` 独立服务 | 真正本地开源权重；英文音色多，适合讲故事 |
 | 备选 TTS | **Piper** `en_US-lessac-medium` / `en_US-amy-medium` | PC | 比 edge-tts 更「真本地」，CPU 很快，音质中等 |
 | LLM | 云端视觉模型（不变） | 云端 | 看图/故事理解仍走 API |
-| 适用 | 8 核以上 / 16GB+，本机 Arc iGPU 可加速 | | small 模型约 500MB 量级 |
+| 适用 | 8 核以上 / 16GB+，核显可加速 | | small 模型约 500MB 量级 |
 
 环境变量示例：
 
@@ -118,7 +118,7 @@ $env:TALKMATE_WHISPER_MODEL = "distil-large-v3"
    - ✅ 手机浏览器 + 局域网访问 PC 服务（当前架构）  
    - ❌ 在手机浏览器里加载 large-whisper / 大 TTS（不现实）  
    - ✅ 无 PC 时：App 内 Web Speech + 系统 TTS（低档兜底）  
-4. **这台 Zenbook（Ultra 9 + Arc 140T + 32GB）**：直接按 **中档** 部署最合理；故事模式要更好听再上 **高档 Kokoro**。
+4. **16 核 + 32GB 的轻薄本**：直接按 **中档** 部署最合理；故事模式要更好听再上 **高档 Kokoro**。
 
 ## 建议默认组合（按你的使用场景）
 

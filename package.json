@@ -4,7 +4,7 @@
   "private": true,
   "description": "TalkMate — local-first English speaking practice web app",
   "license": "MIT",
-  "author": "steveeyre <steveeyre10@gmail.com>",
+  "author": "steveeyre",
   "scripts": {
     "test": "node --test \"tests/**/*.test.mjs\""
   }
