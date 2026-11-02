@@ -1,0 +1,18 @@
+# Python environments, recreated by scripts/setup-first-run.ps1
+.venv-whisper/
+.venv-tts/
+__pycache__/
+*.py[cod]
+
+# Bundled model weights (~1 GB); shipped through TalkMate-Portable.zip, not git
+scripts/models/
+
+# Build output
+_pkg_stage/
+*.zip
+
+# Local agent session state / worktrees
+.rebon/
+
+# Publish copy prepared for GitHub (nested repository)
+main/

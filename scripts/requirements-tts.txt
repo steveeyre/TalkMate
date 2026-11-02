@@ -1,0 +1,11 @@
+# TalkMate local TTS deps (pinned; install with: python -m pip install -r requirements-tts.txt)
+# NOTE: kokoro-onnx 0.6.1 needs Python <3.14 (venv here is 3.12) —
+# install with the venv's pip, not the system Python 3.14.
+kokoro-onnx==0.6.1
+numpy==2.5.3
+edge-tts==7.2.8
+pyttsx3==2.99
+fastapi==0.141.1
+uvicorn==0.53.0
+pydantic==2.13.5
+onnxruntime==1.30.0

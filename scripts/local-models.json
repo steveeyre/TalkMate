@@ -1,0 +1,17 @@
+{
+  "root": "%USERPROFILE%\\.ollama\\models",
+  "engine": "ollama",
+  "models": [
+    {
+      "id": "qwen3.8-9b-distill",
+      "title": "qwen3.8-9b-distill",
+      "alias": "qwen3.8-9b-distill",
+      "engine": "ollama",
+      "baseUrl": "http://127.0.0.1:11434/v1",
+      "sizeMB": 5780.1,
+      "vision": true
+    }
+  ],
+  "default": "qwen3.8-9b-distill",
+  "_note": "Portable template. Run 01-First-Install.bat on the target PC to regenerate with local GGUF paths."
+}
